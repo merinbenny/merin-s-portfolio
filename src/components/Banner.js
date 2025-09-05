@@ -10,8 +10,18 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Full Stack Web Developer", "Software Engineer" ];
+  const [visitorName, setVisitorName] = useState(""); // 👈 new state
+
+  const toRotate = ["Full Stack Web Developer", "Software Engineer"];
   const period = 2000;
+
+  // Load visitorName from localStorage
+  useEffect(() => {
+    const savedName = localStorage.getItem("visitorName");
+    if (savedName) {
+      setVisitorName(savedName);
+    }
+  }, []);
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -19,12 +29,14 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
     let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
 
@@ -44,7 +56,7 @@ export const Banner = () => {
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
-  }
+  };
 
   return (
     <section className="banner" id="home">
@@ -53,13 +65,30 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                
-                <h1>{`Hi! I'm Merin...`} </h1>  
-                <h2><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Developer","Full stack Web Developer" ]'><span className="wrap">{text}</span></span></h2>
-                  <p>I’m curious and creative software developer who loves bringing ideas to life through code. My focus is on building dynamic, responsive, and visually appealing web applications. I enjoy experimenting with new technologies, improving workflows, and learning continuously. When I’m not coding, you’ll find me exploring design trends or finding inspiration for my next project.</p>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  
+                  <h1>
+  {visitorName 
+    ? <>Hi {visitorName},<br />Welcome to Merin's Portfolio</> 
+    : "Hi! Welcome to Merin's Portfolio"}
+</h1>
+
+
+                  <h2>
+                    <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Developer","Full stack Web Developer" ]'>
+                      <span className="wrap">{text}</span>
+                    </span>
+                  </h2>
+                  
+                  <p>
+                    I’m curious and creative software developer who loves bringing ideas to life through code. 
+                    My focus is on building dynamic, responsive, and visually appealing web applications. 
+                    I enjoy experimenting with new technologies, improving workflows, and learning continuously. 
+                    When I’m not coding, you’ll find me exploring design trends or finding inspiration for my next project.
+                  </p>
                   <button onClick={() => console.log('connect')}>Let’s Connect </button>
-              </div>}
+                </div>
+              }
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
@@ -67,7 +96,8 @@ export const Banner = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <img src={headerImg} alt="Header Img"/>
-                </div>}
+                </div>
+              }
             </TrackVisibility>
           </Col>
         </Row>
