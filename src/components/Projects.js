@@ -43,7 +43,7 @@ export const Projects = () => {
       title:"Currency Converter",
       description:"Project done as part of Udemy C# Masterclass",
       imgUrl:projImg5,
-      link:"https://github.com/merinbenny/CurrencyConverter_Static"
+      link:"https://github.com/merinbenny/CurrencyConverterC-.git"
     },
     {
       title:"Console Quiz Program",
@@ -66,13 +66,13 @@ export const Projects = () => {
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">My Projects</Nav.Link>
+                      <Nav.Link eventKey="first">Tab 1</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Comming Soon</Nav.Link>
+                      <Nav.Link eventKey="second">Tab 2</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Comming Soon</Nav.Link>
+                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>

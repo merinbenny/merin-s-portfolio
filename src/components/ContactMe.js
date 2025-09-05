@@ -10,7 +10,7 @@ export const ContactMe = () => {
         {/* Mail button */}
         <Button
           variant="dark"
-          href="mailto:merin31032000@gmail.com"
+          href="mailto:merinsimmy@gmail.com"
           style={{ display: "flex", alignItems: "center", gap: "8px" }}
         >
           <FaEnvelope /> Mail
