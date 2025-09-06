@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/merin-s-portfolio/static/css/main.b91ea372.css",
-    "main.js": "/merin-s-portfolio/static/js/main.ece53739.js",
+    "main.css": "/merin-s-portfolio/static/css/main.76a3b3d8.css",
+    "main.js": "/merin-s-portfolio/static/js/main.cdb98452.js",
     "static/js/787.fb771931.chunk.js": "/merin-s-portfolio/static/js/787.fb771931.chunk.js",
     "static/media/project-img1.png": "/merin-s-portfolio/static/media/project-img1.d64952813fc1c68af73c.png",
     "static/media/color-sharp.png": "/merin-s-portfolio/static/media/color-sharp.bea361cfef80fefc2d1e.png",
@@ -9,6 +9,7 @@
     "static/media/color-sharp2.png": "/merin-s-portfolio/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
     "static/media/project-img4.png": "/merin-s-portfolio/static/media/project-img4.c420bb257d1e802d85bb.png",
     "static/media/header-img.png": "/merin-s-portfolio/static/media/header-img.cfa6374e117ec018884b.png",
+    "static/media/bounce-icon.png": "/merin-s-portfolio/static/media/bounce-icon.a43f18c6084a7f579e76.png",
     "static/media/BD019326-BE9A-4768-83A6-44DC1EADED0E-removebg-preview.png": "/merin-s-portfolio/static/media/BD019326-BE9A-4768-83A6-44DC1EADED0E-removebg-preview.4c6ec96f353afa41a387.png",
     "static/media/project-img5.png": "/merin-s-portfolio/static/media/project-img5.d98b27bd022736f563e4.png",
     "static/media/project-img2.png": "/merin-s-portfolio/static/media/project-img2.4b4f5bb6a1623d1cb7d9.png",
@@ -25,12 +26,12 @@
     "static/media/meter3.svg": "/merin-s-portfolio/static/media/meter3.2201f7e4df22bc4b08180210474f28cc.svg",
     "index.html": "/merin-s-portfolio/index.html",
     "static/media/nav-icon1.svg": "/merin-s-portfolio/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
-    "main.b91ea372.css.map": "/merin-s-portfolio/static/css/main.b91ea372.css.map",
-    "main.ece53739.js.map": "/merin-s-portfolio/static/js/main.ece53739.js.map",
+    "main.76a3b3d8.css.map": "/merin-s-portfolio/static/css/main.76a3b3d8.css.map",
+    "main.cdb98452.js.map": "/merin-s-portfolio/static/js/main.cdb98452.js.map",
     "787.fb771931.chunk.js.map": "/merin-s-portfolio/static/js/787.fb771931.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b91ea372.css",
-    "static/js/main.ece53739.js"
+    "static/css/main.76a3b3d8.css",
+    "static/js/main.cdb98452.js"
   ]
 }
