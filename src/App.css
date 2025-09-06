@@ -31,6 +31,20 @@
   z-index: 9999;
   color: white;
 }
+.bouncing-img {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}
+
+
 
 .loader {
   border: 6px solid rgba(255, 255, 255, 0.2); /* faint ring */
@@ -658,4 +672,57 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .connect-wrapper .social-icon a img:hover {
   transform: scale(1.2);
+}
+
+
+/* ################################################*/
+/* Frosted glass popup box */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.popup-box {
+  background: rgba(255, 255, 255, 0.75); /* semi-transparent white */
+  backdrop-filter: blur(10px);            /* frosted glass blur */
+  -webkit-backdrop-filter: blur(10px);    /* Safari support */
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  width: 450px;
+  min-height: 350px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Smooth entrance */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Small bouncing image */
+.bouncing-img {
+   width: 100px;        /* larger size */
+  margin-bottom: 20px;
+  animation: bounce 5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* Human checkbox label */
+.human-label {
+  color: black;
+  font-weight: 500;
 }

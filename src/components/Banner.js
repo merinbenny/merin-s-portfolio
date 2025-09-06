@@ -4,30 +4,20 @@ import { Col, Container, Row } from "react-bootstrap";
 import TrackVisibility from 'react-on-screen';
 import headerImg from "../assets/img/header-img.png";
 
-export const Banner = () => {
+export const Banner = ({ visitorName }) => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const [visitorName, setVisitorName] = useState(""); // 👈 new state
 
   const toRotate = ["Full Stack Web Developer", "Software Engineer"];
   const period = 2000;
-
-  // Load visitorName from localStorage
-  useEffect(() => {
-    const savedName = localStorage.getItem("visitorName");
-    if (savedName) {
-      setVisitorName(savedName);
-    }
-  }, []);
 
   useEffect(() => {
     let ticker = setInterval(() => {
       tick();
     }, delta);
-
     return () => { clearInterval(ticker) };
   }, [text]);
 
@@ -66,13 +56,11 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  
                   <h1>
-  {visitorName 
-    ? <>Hi {visitorName},<br />Welcome to Merin's Portfolio</> 
-    : "Hi! Welcome to Merin's Portfolio"}
-</h1>
-
+                    {visitorName 
+                      ? <>Hi {visitorName},<br />Welcome to Merin's Portfolio</> 
+                      : "Hi user! Welcome to Merin's Portfolio"}
+                  </h1>
 
                   <h2>
                     <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Software Developer","Full stack Web Developer" ]'>
@@ -103,5 +91,5 @@ export const Banner = () => {
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};
